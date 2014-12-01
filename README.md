@@ -25,26 +25,21 @@ This adapter exposes the following methods:
 
 After you install follow these steps:
 
-1. Open `config/adapters.js` and put there:
+1.Open `config/adapters.js` and put there:
 ```javascript
 'sails-datatable': require('sails-datatable');
 ```
-2. Open `config/connections.js` and add:
+2.Open `config/connections.js` and add:
 ```javascript
     datatable: {
         adapter: 'sails-datatable'
     },
 ```
-3. Open model file and add connection:
-4. In controller add datatable action (example below):
-
-2. Open `config/connections.js` and add:
-
-3. Open model file and add connection:
+3.Open model file and add connection:
 ```javascript
 connection: 'datatable',
 ```
-4. In controller add datatable action (example below):
+4.In controller add datatable action (example below):
 ```javascript
 datatable: {
 	action: function (req, res, next) {
