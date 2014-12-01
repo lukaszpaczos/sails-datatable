@@ -39,21 +39,6 @@ After you install follow these steps:
 ```javascript
 connection: 'datatable',
 ```
-4. In controller add datatable action (example below):
-```javascript
-		datatable: {
-			action: function (req, res, next) {
-				Model.datatable(req.body, function (err, data) {
-					if (err) {
-						return next(new error.InvalidContentError(err));
-					} else {
-						res.send(data);
-						next();
-					}
-				});
-			}
-		}
-```
 
 ### License
 
