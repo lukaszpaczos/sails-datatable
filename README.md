@@ -36,10 +36,29 @@ After you install follow these steps:
     },
 ```
 3. Open model file and add connection:
+4. In controller add datatable action (example below):
+
+2. Open `config/connections.js` and add:
+
+3. Open model file and add connection:
 ```javascript
 connection: 'datatable',
 ```
-
+4. In controller add datatable action (example below):
+```javascript
+datatable: {
+	action: function (req, res, next) {
+		Model.datatable(req.body, function (err, data) {
+			if (err) {
+				return next(new error.InvalidContentError(err));
+			} else {
+				res.send(data);
+				next();
+			}
+		});
+	}
+}
+```
 ### License
 
 **[MIT](./LICENSE)**
