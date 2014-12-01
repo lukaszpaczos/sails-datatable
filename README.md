@@ -24,6 +24,7 @@ This adapter exposes the following methods:
 ### Example of use
 
 After you install follow these steps:
+
 1. Open `config/adapters.js` and put there:
 ```javascript
 'sails-datatable': require('sails-datatable');
