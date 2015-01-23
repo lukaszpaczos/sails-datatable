@@ -54,6 +54,22 @@ datatable: {
 	}
 }
 ```
+5.Populate in datatable:
+```javascript
+datatable: {
+	action: function (req, res, next) {
+		req.body.populate = ['item1', 'item2', 'item3'];
+		Model.datatable(req.body, function (err, data) {
+			if (err) {
+				return next(new error.InvalidContentError(err));
+			} else {
+				res.send(data);
+				next();
+			}
+		});
+	}
+}
+```
 ### License
 
 **[MIT](./LICENSE)**
