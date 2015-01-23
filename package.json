@@ -1,6 +1,6 @@
 {
   "name": "sails-datatable",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "Datatable adapter for Sails / Waterline",
   "main": "./lib/adapter.js",
   "scripts": {
