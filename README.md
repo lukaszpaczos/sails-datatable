@@ -2,7 +2,7 @@
 
 # sails-datatable
 
-This module is a Waterline/Sails adapter to use with jQuery datatable. 
+This module is a Waterline/Sails adapter to use with jQuery datatable (tested on 1.10.4). 
 I implement only basic things.
 
 ### Installation
