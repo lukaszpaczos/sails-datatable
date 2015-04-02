@@ -70,6 +70,23 @@ datatable: {
 	}
 }
 ```
+6.GroupBy in datatable:
+```javascript
+datatable: {
+	action: function (req, res, next) {
+		req.body.groupBy = ['item1', 'item2', 'item3'];
+		req.body.sumBy = 'item1'; // Needed because waterline groupBy only when have aggregation functions
+		Model.datatable(req.body, function (err, data) {
+			if (err) {
+				return next(new error.InvalidContentError(err));
+			} else {
+				res.send(data);
+				next();
+			}
+		});
+	}
+}
+```
 ### License
 
 **[MIT](./LICENSE)**
