@@ -58,7 +58,8 @@ datatable: {
 ```javascript
 datatable: {
 	action: function (req, res, next) {
-		req.body.populate = ['item1', 'item2', 'item3'];
+		req.params.populate = ['item1', 'item2', 'item3'];
+
 		Model.datatable(req.body, function (err, data) {
 			if (err) {
 				return next(new error.InvalidContentError(err));
@@ -70,12 +71,15 @@ datatable: {
 	}
 }
 ```
-6.GroupBy in datatable:
+6.Filter in datatable:
 ```javascript
 datatable: {
 	action: function (req, res, next) {
-		req.body.groupBy = ['item1', 'item2', 'item3'];
-		req.body.sumBy = 'item1'; // Waterline groupBy works only when have aggregation function
+	    // Like where conditions in waterline
+		req.params.filter = {
+		    param1: 'value1'
+		};
+
 		Model.datatable(req.body, function (err, data) {
 			if (err) {
 				return next(new error.InvalidContentError(err));
