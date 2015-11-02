@@ -1,42 +1,43 @@
 {
-  "name": "sails-datatable",
-  "version": "0.10.4",
-  "description": "Datatable adapter for Sails / Waterline",
-  "main": "./lib/adapter.js",
-  "scripts": {
-    "test": "node test/integration/runner -R spec -b"
-  },
-  "repository": {
-    "type":"git",
-    "url":"https://github.com/lukaszpaczos/sails-datatable.git"
-  },
-  "keywords": [
-    "datatable",
-    "adapter",
-    "sails",
-    "waterline",
-    "sails.js",
-    "mongodb",
-    "mongo",
-    "plugin"
-  ],
-  "author": "Lukasz Paczos",
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "dependencies": {
-    "waterline-errors": "~0.10.0"
-  },
-  "devDependencies": {
-    "waterline-adapter-tests": "~0.10.0",
-    "mocha": "*",
-    "captains-log": "~0.11.0"
-  },
-  "waterlineAdapter": {
-    "type": "datatable",
-    "interfaces": [
-      "semantic",
-      "queryable"
+    "name": "sails-datatable",
+    "version": "0.10.5",
+    "description": "Datatable adapter for Sails / Waterline",
+    "main": "./lib/adapter.js",
+    "scripts": {
+        "test": "node test/integration/runner -R spec -b"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lukaszpaczos/sails-datatable.git"
+    },
+    "keywords": [
+        "datatable",
+        "adapter",
+        "sails",
+        "waterline",
+        "sails.js",
+        "mongodb",
+        "mongo",
+        "plugin"
     ],
-    "waterlineVersion": "~0.10.0"
-  }
+    "author": "Lukasz Paczos",
+    "license": "MIT",
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "waterline-errors": "~0.10.0",
+        "lodash": "~3.10.1"
+    },
+    "devDependencies": {
+        "waterline-adapter-tests": "~0.10.0",
+        "mocha": "*",
+        "captains-log": "~0.11.0"
+    },
+    "waterlineAdapter": {
+        "type": "datatable",
+        "interfaces": [
+            "semantic",
+            "queryable"
+        ],
+        "waterlineVersion": "~0.10.0"
+    }
 }
